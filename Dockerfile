@@ -45,7 +45,7 @@ RUN echo 'Downloading IntelliJ IDEA' && \
     tar -xf /tmp/intellij.tar.gz --strip-components=1 -C /opt/intellij && \
     rm /tmp/intellij.tar.gz
 
-RUN cd /home/developer/.IdeaIC2016.3/config/plugins
+RUN cd /home/developer/.IdeaIC2016.3/config/plugins/
 
 RUN echo 'Installing MSA plugin' && \
     wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/monticore/lang/montisecarc/IntelliJ_Language_Plugin/0.7.11.SNAPSHOT/IntelliJ_Language_Plugin-0.7.11.SNAPSHOT.zip -O msa.zip -q && \
