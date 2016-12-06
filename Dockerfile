@@ -50,7 +50,7 @@ RUN echo 'Installing Analyzer plugin' && \
     rm analyzer.zip
 
 RUN echo 'Installing Graph Database Support plugin' && \
-    wget https://plugins.jetbrains.com/plugin/download?pr=idea&updateId=29684 -O graphdb.zip -q && \
+    wget https://plugins.jetbrains.com/files/8087/29684/GraphDatabaseSupport-2.1.2.zip -O graphdb.zip -q && \
     unzip -q graphdb.zip && \
     rm graphdb.zip
 
