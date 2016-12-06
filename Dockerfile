@@ -6,11 +6,14 @@ ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
-    apt-get update -qq && \
-    echo 'Installing OS dependencies' && \
-    apt-get install -qq -y --fix-missing sudo software-properties-common git libxext-dev libxrender-dev libxslt1.1 \
-        libxtst-dev libgtk2.0-0 libcanberra-gtk-module unzip wget && \
-    echo 'Cleaning up' && \
+    apt-get update -qq
+
+RUN echo 'Installing OS dependencies' && \
+    apt-get install -qq -y --fix-missing sudo software-properties-common git unzip wget && \
+    apt-get install openjdk-8-jdk -qq -y && \
+    apt-get install gradle -qq -y
+
+RUN echo 'Cleaning up' && \
     apt-get clean -qq -y && \
     apt-get autoclean -qq -y && \
     apt-get autoremove -qq -y &&  \
@@ -29,6 +32,9 @@ RUN echo 'Creating user: developer' && \
 
 RUN mkdir -p /home/developer/.IdeaIC2016.3/config/options && \
     mkdir -p /home/developer/.IdeaIC2016.3/config/plugins
+
+ADD ./jdk.table.xml /home/developer/.IdeaIC2016.3/config/options/jdk.table.xml
+ADD ./jdk.table.xml /home/developer/.jdk.table.xml
 
 RUN chown developer:developer -R /home/developer/.IdeaIC2016.3
 
@@ -59,4 +65,3 @@ RUN sudo chown developer:developer -R /home/developer
 USER developer
 ENV HOME /home/developer
 WORKDIR /home/developer/msa
-CMD /usr/local/bin/intellij
