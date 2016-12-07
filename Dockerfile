@@ -38,7 +38,8 @@ ADD ./jdk.table.xml /home/developer/.jdk.table.xml
 
 ADD ./pluginSetup /usr/local/bin/intellij
 
-RUN chown developer:developer -R /home/developer/.IdeaIC2016.3
+RUN chmod +x /usr/local/bin/intellij && \
+    chown developer:developer -R /home/developer/.IdeaIC2016.3
 
 RUN echo 'Downloading IntelliJ IDEA' && \
     wget https://download.jetbrains.com/idea/ideaIC-2016.3.tar.gz -O /tmp/intellij.tar.gz -q && \
