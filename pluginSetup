@@ -8,7 +8,7 @@ function delayedPluginInstall {
     cd /home/developer/.IdeaIC2016.3/config/plugins/
 
     echo 'Installing MSA plugin'
-    wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/monticore/lang/montisecarc/IntelliJ_Language_Plugin/0.8.0.SNAPSHOT/IntelliJ_Language_Plugin-0.8.0.SNAPSHOT.zip -O msa.zip -q && unzip -q msa.zip && rm msa.zip
+    wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/monticore/lang/montisecarc/IntelliJ_Language_Plugin/0.8.1.SNAPSHOT/IntelliJ_Language_Plugin-0.8.1.SNAPSHOT.zip -O msa.zip -q && unzip -q msa.zip && rm msa.zip
 
     echo 'Installing GraphDatabase plugin'
     wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/tbuning/neo4j/graphdatabase/GraphDatabasePlugin/1.0.0/GraphDatabasePlugin-1.0.0.zip -O GraphDatabasePlugin.zip -q && unzip -q GraphDatabasePlugin.zip && rm GraphDatabasePlugin.zip

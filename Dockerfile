@@ -50,7 +50,7 @@ RUN echo 'Downloading IntelliJ IDEA' && \
 
 RUN echo 'Installing MSA plugin' && \
     cd /home/developer/.IdeaIC2016.3/config/plugins/ && \
-    wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/monticore/lang/montisecarc/IntelliJ_Language_Plugin/0.8.0.SNAPSHOT/IntelliJ_Language_Plugin-0.8.0.SNAPSHOT.zip -O msa.zip -q && \
+    wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/monticore/lang/montisecarc/IntelliJ_Language_Plugin/0.8.1.SNAPSHOT/IntelliJ_Language_Plugin-0.8.1.SNAPSHOT.zip -O msa.zip -q && \
     unzip -q msa.zip && \
     rm msa.zip
 
