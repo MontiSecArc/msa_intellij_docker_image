@@ -9,7 +9,7 @@ RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
     apt-get update -qq
 
 RUN echo 'Installing OS dependencies' && \
-    apt-get install -qq -y --fix-missing sudo software-properties-common git libxext-dev libxrender-dev libxslt1.1 libxtst-dev libgtk2.0-0 libcanberra-gtk-module unzip wget && \
+    apt-get install -qq -y --fix-missing sudo software-properties-common git unzip wget && \
     apt-get install openjdk-8-jdk -qq -y && \
     apt-get install gradle -qq -y
 
@@ -50,19 +50,19 @@ RUN echo 'Downloading IntelliJ IDEA' && \
 
 RUN echo 'Installing MSA plugin' && \
     cd /home/developer/.IdeaIC2016.3/config/plugins/ && \
-    wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/monticore/lang/montisecarc/IntelliJ_Language_Plugin/0.7.11.SNAPSHOT/IntelliJ_Language_Plugin-0.7.11.SNAPSHOT.zip -O msa.zip -q && \
+    wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/monticore/lang/montisecarc/IntelliJ_Language_Plugin/0.8.10.SNAPSHOT/IntelliJ_Language_Plugin-0.7.11.SNAPSHOT.zip -O msa.zip -q && \
     unzip -q msa.zip && \
     rm msa.zip
 
-RUN echo 'Installing Analyzer plugin' && \
+RUN echo 'Installing GraphDatabase plugin' && \
     cd /home/developer/.IdeaIC2016.3/config/plugins/ && \
-    wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/monticore/lang/montisecarc/AnalyzerPlugin/0.7.11.SNAPSHOT/AnalyzerPlugin-0.7.11.SNAPSHOT.zip -O analyzer.zip -q && \
-    unzip -q analyzer.zip && \
-    rm analyzer.zip
+    wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/tbuning/neo4j/graphdatabase/GraphDatabasePlugin/1.0.0/GraphDatabasePlugin-1.0.0.zip -O GraphDatabasePlugin.zip -q && \
+    unzip -q GraphDatabasePlugin.zip && \
+    rm GraphDatabasePlugin.zip
 
 RUN echo 'Installing Graph Database Support plugin' && \
     cd /home/developer/.IdeaIC2016.3/config/plugins/ && \
-    wget https://plugins.jetbrains.com/files/8087/29684/GraphDatabaseSupport-2.1.2.zip -O graphdb.zip -q && \
+    wget https://plugins.jetbrains.com/files/8087/29684/GraphDatabaseSupport-2.2.0.zip -O graphdb.zip -q && \
     unzip -q graphdb.zip && \
     rm graphdb.zip
 
