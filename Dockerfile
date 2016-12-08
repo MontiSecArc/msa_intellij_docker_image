@@ -62,7 +62,7 @@ RUN echo 'Installing GraphDatabase plugin' && \
 
 RUN echo 'Installing Graph Database Support plugin' && \
     cd /home/developer/.IdeaIC2016.3/config/plugins/ && \
-    wget https://plugins.jetbrains.com/files/8087/29684/GraphDatabaseSupport-2.2.0.zip -O graphdb.zip -q && \
+    wget https://plugins.jetbrains.com/files/8087/30872/GraphDatabaseSupport-2.2.0.zip -O graphdb.zip -q && \
     unzip -q graphdb.zip && \
     rm graphdb.zip
 

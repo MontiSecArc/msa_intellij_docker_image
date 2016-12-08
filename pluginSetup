@@ -14,7 +14,7 @@ function delayedPluginInstall {
     wget http://138.68.65.103:8081/artifactory/intellij_plugins_snapshot_local/de/tbuning/neo4j/graphdatabase/GraphDatabasePlugin/1.0.0/GraphDatabasePlugin-1.0.0.zip -O GraphDatabasePlugin.zip -q && unzip -q GraphDatabasePlugin.zip && rm GraphDatabasePlugin.zip
 
     echo 'Installing Graph Database Support plugin'
-    wget https://plugins.jetbrains.com/files/8087/29684/GraphDatabaseSupport-2.2.0.zip -O graphdb.zip -q && unzip -q graphdb.zip && rm graphdb.zip
+    wget https://plugins.jetbrains.com/files/8087/30872/GraphDatabaseSupport-2.2.0.zip -O graphdb.zip -q && unzip -q graphdb.zip && rm graphdb.zip
 
     # Adding the predefined preferences to IDEA
     cp /home/developer/.jdk.table.xml /home/developer/.IdeaIC2016.3/config/options/jdk.table.xml
