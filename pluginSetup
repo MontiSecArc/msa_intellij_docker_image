@@ -8,10 +8,10 @@ function delayedPluginInstall {
     cd /home/developer/.IdeaIC2017.1/config/plugins/
 
     echo 'Installing MSA plugin'
-    wget https://github.com/MontiSecArc/intellij_msa_language_plugin/releases/download/0.8.16/IntelliJ_MSA-0.8.16.zip -O msa.zip -q && unzip -q msa.zip && rm msa.zip
+    wget https://github.com/MontiSecArc/intellij_msa_language_plugin/releases/download/0.8.17/IntelliJ_MSA-0.8.17.zip -O msa.zip -q && unzip -q msa.zip && rm msa.zip
 
     echo 'Installing GraphDatabase plugin'
-    wget https://github.com/MontiSecArc/graphdatabase/releases/download/1.0.4/GraphDatabase-1.0.4.zip -O GraphDatabasePlugin.zip -q && unzip -q GraphDatabasePlugin.zip && rm GraphDatabasePlugin.zip
+    wget https://github.com/MontiSecArc/graphdatabase/releases/download/1.0.5/GraphDatabase-1.0.5.zip -O GraphDatabasePlugin.zip -q && unzip -q GraphDatabasePlugin.zip && rm GraphDatabasePlugin.zip
 
     # Adding the predefined preferences to IDEA
     cp /home/developer/.jdk.table.xml /home/developer/.IdeaIC2017.1/config/options/jdk.table.xml
