@@ -50,13 +50,13 @@ RUN echo 'Downloading IntelliJ IDEA' && \
 
 RUN echo 'Installing MSA plugin' && \
     cd /home/developer/.IdeaIC2017.1/config/plugins/ && \
-    wget https://github.com/MontiSecArc/intellij_msa_language_plugin/releases/download/0.8.16/IntelliJ_MSA-0.8.16.zip -O msa.zip -q && \
+    wget https://github.com/MontiSecArc/intellij_msa_language_plugin/releases/download/0.8.17/IntelliJ_MSA-0.8.17.zip -O msa.zip -q && \
     unzip -q msa.zip && \
     rm msa.zip
 
 RUN echo 'Installing GraphDatabase plugin' && \
     cd /home/developer/.IdeaIC2017.1/config/plugins/ && \
-    wget https://github.com/MontiSecArc/graphdatabase/releases/download/1.0.4/GraphDatabase-1.0.4.zip -O GraphDatabasePlugin.zip -q && \
+    wget https://github.com/MontiSecArc/graphdatabase/releases/download/1.0.5/GraphDatabase-1.0.5.zip -O GraphDatabasePlugin.zip -q && \
     unzip -q GraphDatabasePlugin.zip && \
     rm GraphDatabasePlugin.zip
 
