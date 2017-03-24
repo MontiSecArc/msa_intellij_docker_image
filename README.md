@@ -5,7 +5,7 @@ This project creates a docker image with a pre-installed IntelliJ IDEA 2017.1 in
 
 https://hub.docker.com/r/thomasbuning/msa_intellij_docker_image/
 
-The docker image gets automatically build everytime a publish to the repository: https://github.com/tbuning/msa_intellij_docker_image is made. The GitHub repository is mirrored with this repository to make use of the advanced integration of GitHub and Docker Hub.
+The docker image gets automatically build everytime a publish to the repository.
 
 **Current Plugin Versions in Image**
 
