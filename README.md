@@ -1,5 +1,5 @@
 # About 
-This project creates a docker image with a pre-installed IntelliJ IDEA 2016.3 instance. By utilizing docker IntelliJ IDEA with pre-installed MontiSecArc plugins can be distributed either for development purposes by using X11, for example, or by running headless IntelliJ IDEA instances in the docker image and therefore, providing a headless IntelliJ IDEA inspection server.
+This project creates a docker image with a pre-installed IntelliJ IDEA 2017.1 instance. By utilizing docker IntelliJ IDEA with pre-installed MontiSecArc plugins can be distributed either for development purposes by using X11, for example, or by running headless IntelliJ IDEA instances in the docker image and therefore, providing a headless IntelliJ IDEA inspection server.
 
 **Docker Hub Link:**
 
@@ -9,9 +9,8 @@ The docker image gets automatically build everytime a publish to the repository:
 
 **Current Plugin Versions in Image**
 
-- IntelliJ_Language_Plugin:  0.8.2.SNAPSHOT
-- GraphDatabasePlugin:       1.0.0
-- GraphDatabaseSupport:    2.2.0
+- IntelliJ_Language_Plugin:  0.8.17
+- GraphDatabasePlugin:       1.0.5
 
 
 # Quickstart
